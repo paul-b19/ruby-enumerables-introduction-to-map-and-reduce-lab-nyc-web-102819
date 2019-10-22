@@ -88,14 +88,17 @@ end
 #end
 
 def reduce_to_any_true(source_array)
+  result = FALSE
   index = 0 
   while index < source_array.count do 
     if source_array[index]
-      return TRUE
+      result = TRUE
+      index += 1
+    else
+      index += 1
     end
-    index += 1 
   end
-  return FALSE
+  result
 end
 
 
